@@ -24,7 +24,7 @@ export default function ContactPage() {
                 Kansas City, MO 64102
                 <br />
                 <a
-                  href="https://maps.app.goo.gl/qFpCzHbrT6APfM5M9"
+                  href="https://maps.app.goo.gl/AZwBM8wEa4RcsxQ2A"
                   target="_blank"
                 >
                   Get directions &rarr;
