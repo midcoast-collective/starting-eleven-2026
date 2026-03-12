@@ -9,22 +9,36 @@ import "swiper/css";
 
 export const Episodes = styled.section`
   --swiper-theme-color: var(--color-white);
+  --swiper-scrollbar-bg-color: rgba(0, 0, 0, 0.1);
+  --swiper-scrollbar-drag-bg-color: var(--color-green);
+  --swiper-scrollbar-bottom: -1rem;
 
-  align-items: center;
-  display: flex;
-  margin: 1.5rem auto 0;
+  position: relative;
+
+  .swiper {
+    overflow: visible;
+  }
+
+  .swiper-slide {
+    background-color: var(--color-gray);
+    height: 100%;
+  }
 `;
 
 const PrevArrow = styled.div`
-  padding: 0.75rem;
+  padding: 6rem 1.75rem;
   visibility: ${({ $visible }) => ($visible ? "visible" : "hidden")};
+  position: absolute;
+  top: calc(50% - 6.5rem);
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
 
   &::after {
     content: "prev";
     color: var(--color-green);
-    cursor: pointer;
     font-family: swiper-icons;
-    font-size: var(--font-size-heading-large);
+    font-size: 2rem;
     text-transform: none !important;
     letter-spacing: 0;
     font-feature-settings: ;
@@ -34,6 +48,9 @@ const PrevArrow = styled.div`
 `;
 
 const NextArrow = styled(PrevArrow)`
+  left: auto;
+  right: 0;
+
   &::after {
     content: "next";
   }
@@ -49,10 +66,9 @@ export const Episode = styled.a`
     border-radius: 8px 8px 0 0;
     display: block;
     width: 100%;
-    height: 100%;
-    max-height: 10rem;
+    max-height: 20rem;
     object-fit: cover;
-    user-select: none;
+    object-position:  50% 15%;
   }
 
   h3 {
@@ -91,24 +107,15 @@ export default function EpisodesComponent({ data }) {
           setIsEnd(swiperRef.isEnd);
         }}
         onSwiper={setSwiperRef}
-        slidesPerView={1}
-        spaceBetween={16}
-        slidesPerGroup={1}
-        breakpoints={{
-          // max-width
-          800: {
-            spaceBetween: 24,
-            slidesPerView: 4,
-            slidesPerGroup: 2,
-          },
-        }}
+        spaceBetween={24}
+        slidesPerView={1.1}
       >
-        {data.map((episode) => (
-          <SwiperSlide key={episode.image}>
-            <Episode href={episode.link} target="_blank">
-              <img src={episode.image} alt="" />
-              <h3>{episode.subtitle}</h3>
-              <h4>{episode.title}</h4>
+        {!!data?.length && data.map((episode) => (
+          <SwiperSlide key={episode?.image}>
+            <Episode href={episode?.link} target="_blank">
+              <img src={episode?.image} alt="" />
+              <h3>{episode?.subtitle}</h3>
+              <h4>{episode?.title}</h4>
             </Episode>
           </SwiperSlide>
         ))}

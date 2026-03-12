@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="23px" viewBox="0 0 21 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>street_access</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="street_access" transform="translate(1.000000, 1.000000)" stroke="#4C4C4C" stroke-width="1.1">
+            <path d="M18,20.5 L1.4,20.5 C0.9,20.5 0.4,20.1 0.4,19.5 L0.4,1 C0.4,0.5 0.8,0 1.4,0 L18,0 C18.5,0 19,0.4 19,1 L19,19.5 C19,20 18.6,20.5 18,20.5 Z" id="Path"></path>
+            <path d="M16.2,0 L16.2,20.5" id="Path"></path>
+            <path d="M3.3,0 L3.3,20.5" id="Path"></path>
+            <path d="M9.6,2.6 L9.6,5.2" id="Path"></path>
+            <path d="M9.6,9 L9.6,11.6" id="Path"></path>
+            <path d="M9.6,15.4 L9.6,18" id="Path"></path>
+        </g>
+    </g>
+</svg>

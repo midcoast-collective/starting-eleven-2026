@@ -74,11 +74,6 @@ const ResponsivePlayer = ({
   useEffect(() => {
     const wrapperRect = wrapperRef.current.getBoundingClientRect();
 
-    console.log({
-      wrapperBottom: wrapperRect.bottom,
-      windowHeight: window.innerHeight,
-    });
-
     function addScrollIcon() {
       if (
         !scrollRef.current.classList.contains("visible") &&

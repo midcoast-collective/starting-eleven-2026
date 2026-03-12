@@ -28,8 +28,9 @@ export const Gallery = styled.section`
 
   .swiper-slide img {
     user-select: none;
-    height: auto;
     width: 100%;
+    height: ${({ flag }) => (flag === "modal" ? "500px" : "auto")}; /* Conditionally set height */
+    object-fit: cover;
   }
 `;
 
@@ -64,7 +65,7 @@ const NextArrow = styled(PrevArrow)`
   }
 `;
 
-export default function GalleryComponent({ data }) {
+export default function GalleryComponent({ data, flag, handleClick }) {
   const [swiperRef, setSwiperRef] = useState();
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
@@ -78,7 +79,7 @@ export default function GalleryComponent({ data }) {
   }, [swiperRef]);
 
   return (
-    <Gallery>
+    <Gallery flag={flag}>
       <PrevArrow onClick={handlePrevious} $visible={!isBeginning} />
 
       <Swiper
@@ -88,21 +89,21 @@ export default function GalleryComponent({ data }) {
         }}
         onSwiper={setSwiperRef}
         spaceBetween={24}
-        slidesPerView={1.1}
+        slidesPerView={flag == "modal" ? 1 : 1.1}
         modules={[Scrollbar]}
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
         breakpoints={{
           // max-width
           800: {
-            slidesPerView: 1.1,
+            slidesPerView: flag == "modal" ? 1 : 1.1,
             spaceBetween: 48,
           },
         }}
       >
         {data.map((image) => (
           <SwiperSlide key={image}>
-            <img src={image} alt="" />
+            <img src={image} alt="" onClick={handleClick} />
           </SwiperSlide>
         ))}
       </Swiper>

@@ -7,7 +7,7 @@ const Nav = styled.nav`
   display: flex;
   justify-content: flex-end;
 
-  @media (max-width: 800px) {
+  @media (max-width: 943px) {
     justify-content: space-around;
     padding: 0.75rem 0;
   }
@@ -19,11 +19,19 @@ const StyledLink = styled.a`
   font-weight: 600;
   font-size: var(--font-size-strong);
   text-transform: uppercase;
-
+  white-space: nowrap;
   &.last {
-    @media (min-width: 800px) {
+    @media (min-width: 943px) {
       margin-right: 0;
     }
+  }
+  @media (max-width: 560px) {
+    font-size: 1rem;
+    margin: 0 0.5rem;
+  }
+  @media (max-width: 440px) {
+    font-size: 0.8rem;
+    margin: 0 0.3rem;
   }
 `;
 
@@ -34,8 +42,10 @@ export default function NavComponent({ showSocials = false }) {
       <span>{"//"}</span>
       <StyledLink href="/#projects">Projects</StyledLink>
       <span>{"//"}</span>
-      <StyledLink className={showSocials ? "" : "last"} href="/contact">
-        Contact
+      <StyledLink href="/contact">Contact</StyledLink>
+      <span>{"//"}</span>
+      <StyledLink className={showSocials ? "" : "last"} href="/studio">
+        LA Studio
       </StyledLink>
       {showSocials ? (
         <>

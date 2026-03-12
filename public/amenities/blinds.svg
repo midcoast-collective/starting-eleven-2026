@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>blinds</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="blinds" stroke="#4C4C4C" stroke-width="1.1">
+            <path d="M0.8,1.1 L21.2,1.1" id="Path"></path>
+            <path d="M0.8,5.4 L21.2,5.4" id="Path"></path>
+            <path d="M0.8,9.7 L21.2,9.7" id="Path"></path>
+            <path d="M0.8,14 L21.2,14" id="Path"></path>
+            <path d="M18.7,1.6 L18.7,16.7" id="Path"></path>
+            <circle id="Oval" cx="18.7" cy="18.9" r="1.6"></circle>
+        </g>
+    </g>
+</svg>
