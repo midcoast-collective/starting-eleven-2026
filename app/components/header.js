@@ -49,7 +49,7 @@ export default function HeaderComponent() {
         {isHomePage ? <h1 className="sr-only">Starting Eleven</h1> : null}
 
         <LogoWrap href="/">
-          <imgg alt="Starting Eleven" src="/logo." />
+          <img alt="Starting Eleven" src="/logo.png" />
         </LogoWrap>
 
         <Nav />
